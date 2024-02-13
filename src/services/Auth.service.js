@@ -1,6 +1,6 @@
 
 import axios from 'axios';
-const WS_PATH = "https://api-ecommerce-proyectob1.onrender.com";
+const WS_PATH = import.meta.env.VITE_URL_API;
 //const WS_PATH = "https://api-s18-proyecto.onrender.com";
 
 const loginService = async (data)=>{

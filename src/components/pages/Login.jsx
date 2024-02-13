@@ -26,11 +26,19 @@ function Login() {
     }
 
     return ( 
-        <div className="container ">
-            {/* <div className="fondo">*/}
+        
+        <div className="container fondo">
+            
             <h1 className="text-center mb-5 ">Login</h1>
+            
+
+         
+
+
+
+
             <form onSubmit={enviarDatos}>
-                <div className="mb-3">
+                <div className="mb-3 col-6">
                     <label htmlFor="exampleInputEmail1" 
                     className="form-label">Dirección Email</label>
                     <input type="email" 
@@ -42,7 +50,7 @@ function Login() {
                     className="form-text">Nunca Compartiremos tu información personal a nadie !. </div>
                 </div>
 
-                <div className="mb-3">
+                <div className="mb-3 col-6">
                     <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
                     <input type="password" 
                     className="form-control" 
@@ -54,7 +62,7 @@ function Login() {
                 
                 <button type="submit" className="btn btn-primary">Acceder</button>
             </form>
-            {/* </div>*/}
+            
         </div>
 
     );

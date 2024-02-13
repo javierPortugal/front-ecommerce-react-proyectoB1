@@ -1,8 +1,16 @@
-/* .fondo{
-  background-image: url(https://t4.ftcdn.net/jpg/05/99/01/27/240_F_599012797_nAUTiVIm2VfISUhJlXJd6yX8jhnzxEm6.jpg);
-  height: 80vh;
-  background-position: center;
+.fondo{
+  background-image: url(https://wallpapercosmos.com/w/full/5/4/6/1143078-1920x1080-desktop-full-hd-robot-background-photo.jpg);
+  height: 100vh;
+  background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
 
-} */
+} 
+
+.tamanio{
+
+  height: 1px;
+  width: 1px;
+ 
+
+}
