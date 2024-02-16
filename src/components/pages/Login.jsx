@@ -1,10 +1,16 @@
 import {useState} from "react";
 import { loginService } from "../../services/Auth.service";
 
+import { useAuth } from "../context/AuthContext";
+
+
 function Login() {
+
+    const { fnlogin } = useAuth();
+
     const [formulario, setFormulario]= useState({
-        email: '',
-        password: ''
+        email: 'javier.s.portugal@gmail.com',
+        password: 'potato90'
     });
 
     const handleInputChange = (event) => {
@@ -17,9 +23,11 @@ function Login() {
     const enviarDatos = (event)=> {
         event.preventDefault();
         console.log(formulario);
+
         loginService(formulario)
         .then(response => {
-            console.log(response);
+            const token = response.data.data;
+            fnlogin(token);
         }).catch(error =>{
             console.log(error);
         })   
@@ -27,15 +35,20 @@ function Login() {
 
     return ( 
         
-        <div className="container fondo">
+        <div className="container fondo page">
             
+            <div className="row">
+
+                <div className="col-6 col-md-2 mb-3">
+                    <h5>section para logo</h5>
+                    
+                </div>
+
+        </div>
+           
+           
             <h1 className="text-center mb-5 ">Login</h1>
             
-
-         
-
-
-
 
             <form onSubmit={enviarDatos}>
                 <div className="mb-3 col-6">
