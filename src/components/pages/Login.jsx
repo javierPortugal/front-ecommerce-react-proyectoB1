@@ -39,19 +39,26 @@ function Login() {
             
             <div className="row">
 
-                <div className="col-6 col-md-2 mb-3">
-                    <h5>section para logo</h5>
-                    
+                <div className="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                    <div className="card ">
+                        <img
+                            src="../src/img/portuslab-black.png" className="img-fluid"
+                            alt="no_image"
+                            style={{ maxHeight: "20rem", minHeight: "10rem" }}
+                        />
+                    </div>
                 </div>
+
+                
 
         </div>
            
            
-            <h1 className="text-center mb-5 ">Login</h1>
+            <h1 className="text-start mb-5 pt-4 ">Ingresa tus datos para acceder!</h1>
             
 
             <form onSubmit={enviarDatos}>
-                <div className="mb-3 col-6">
+                <div className="mb-3 col-4">
                     <label htmlFor="exampleInputEmail1" 
                     className="form-label">Dirección Email</label>
                     <input type="email" 
@@ -63,7 +70,7 @@ function Login() {
                     className="form-text">Nunca Compartiremos tu información personal a nadie !. </div>
                 </div>
 
-                <div className="mb-3 col-6">
+                <div className="mb-3 col-4">
                     <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
                     <input type="password" 
                     className="form-control" 
