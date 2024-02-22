@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useAuth } from "./context/AuthContext";
+//import { IoHomeOutline } from "react-icons/io5";
 
 function Header() {
     const {isLogged, user,fnLogout} = useAuth();
@@ -12,7 +13,8 @@ function Header() {
                 <div className="container d-flex flex-wrap">
                     <ul className="nav me-auto">
                         <li className="nav-item">
-                            <NavLink to="/home" className="nav-link link-body-emphasis px-2" aria-current="page">Home</NavLink>
+                        
+                            <NavLink to="/home" className="nav-link link-body-emphasis px-2" aria-current="page">Home </NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink to="/productos" className="nav-link link-body-emphasis px-2">Productos</NavLink>
