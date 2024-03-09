@@ -9,8 +9,8 @@ function Login() {
     const { fnlogin } = useAuth();
 
     const [formulario, setFormulario]= useState({
-        email: 'javier.s.portugal@gmail.com',
-        password: 'potato90'
+        email: 'sergio.perez@gmail.com',
+        password: '123456789'
     });
 
     const handleInputChange = (event) => {

@@ -14,7 +14,18 @@ const loginService = async (data)=>{
     
 };
 
-export {loginService};
+
+//Registro de usuario
+const signUpService = async (data)=>{
+    console.log("Entro a signup Service");
+    const response = await axios.post(WS_PATH +'/users', data);
+    return response;
+    
+};
+
+//perfil de usuario
+
+export {loginService, signUpService};
 
 
 

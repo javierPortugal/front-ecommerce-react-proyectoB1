@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-//import { PayPalButtons } from "@paypal/react-paypal-js";
-//import toast from 'react-hot-toast';
+import { PayPalButtons } from "@paypal/react-paypal-js";
+import toast from 'react-hot-toast';
 
 function Checkout() {
 
@@ -12,7 +12,7 @@ function Checkout() {
             let cart = JSON.parse(localStorage.getItem('cart'));
             setTotal(
                 cart.reduce((total, item) => total + item.price * item.quantity, 0)
-                );
+            );
             setProducts(cart);
         }
     }
@@ -38,8 +38,9 @@ function Checkout() {
                 }
             }
         });
-        alert('Producto eliminado del carrito');
-        loadCart();
+        //alert('Producto eliminado del carrito');
+       // toast.error(`${product.name} agregado al carrito`);
+       // loadCart();
         toast.success(`Producto eliminado del carrito`);
         loadCart();
     }
@@ -84,7 +85,32 @@ function Checkout() {
                                 </div>
                             </div>
                             <div className="text-end">
-                            <p>aqui va el boton de paypal</p>
+                                <PayPalButtons
+                                    forceReRender={[total, 'USD', { layout: "vertical" }]}
+                                    fundingSource={undefined}
+                                    createOrder={(data, actions) => {
+                                        return actions.order
+                                            .create({
+                                                purchase_units: [
+                                                    {
+                                                        amount: {
+                                                            currency_code: "USD",
+                                                            value: total,
+                                                        },
+                                                    },
+                                                ],
+                                            })
+                                            .then((orderId) => {
+                                                // Your code here after create the order
+                                                return orderId;
+                                            });
+                                    }}
+                                    onApprove={function (data, actions) {
+                                        return actions.order.capture().then(function () {
+                                            // Your code here after capture the order
+                                        });
+                                    }}
+                                />
                             </div>
                         </div>
                     </div>
