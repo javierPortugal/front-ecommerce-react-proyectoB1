@@ -38,7 +38,23 @@ const profileService = async (data)=>{
     
 };
 
-export {loginService, signUpService, profileService};
+const updateProfileService = async (data) => {
+    console.log("Entro a updateProfileService");
+    const config = {
+        headers: {
+            Authorization: `Bearer ${window.localStorage.getItem(import.meta.env.VITE_TKN_NAME)}`
+        }
+    };
+    const response = await axios.put(WS_PATH + '/users', data, config);
+    return response;
+};
+
+export {
+    loginService, 
+    signUpService, 
+    profileService,
+    updateProfileService
+};
 
 
 
