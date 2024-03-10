@@ -9,7 +9,7 @@ function Home() {
                 
                     <div className="grid gap-2 row-gap-3">
                         <img
-                            src="portuslab-black.jpg" className="img-fluid"
+                            src="portuslab-black.png" className="img-fluid"
                             alt="no_image"
                             style={{ maxHeight: "20rem", minHeight: "10rem" }}
                         />

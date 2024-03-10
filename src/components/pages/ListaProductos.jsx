@@ -48,7 +48,7 @@ function ListaProductos() {
                     <div className="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                         
                             <img
-                                src="portuslab-black.jpg" className="img-fluid"
+                                src="portuslab-black.png" className="img-fluid"
                                 alt="no_image"
                                 style={{ maxHeight: "20rem", minHeight: "10rem" }}
                             />
