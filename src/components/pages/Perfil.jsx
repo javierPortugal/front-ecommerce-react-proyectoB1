@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-//import { profileService, updateProfileService } from "../../services/Auth.service";
+import { profileService, updateProfileService } from "../../services/Auth.service";
+//import { profileService } from "../../services/Auth.service";
 import toast from 'react-hot-toast';
 
 function Perfil() {
@@ -40,7 +41,7 @@ function Perfil() {
             })
             .catch((err) => {
                 console.log(err);
-                toast.error(`No se pudo acrualizar`);
+                toast.error(`No se pudo Actualizar`);
             })
     }
 

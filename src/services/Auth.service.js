@@ -24,8 +24,21 @@ const signUpService = async (data)=>{
 };
 
 //perfil de usuario
+const profileService = async (data)=>{
+    console.log("Entro a profile Service");
+    //como mando token de storage
+    const config = {
+        headers:{
+            Authorization:`Bearer ${window.localStorage.getItem(import.meta.env.VITE_TKN_NAME)}`
+        }
 
-export {loginService, signUpService};
+    };
+    const response = await axios.get(WS_PATH +'/users', config);
+    return response;
+    
+};
+
+export {loginService, signUpService, profileService};
 
 
 
