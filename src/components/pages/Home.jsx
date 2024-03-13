@@ -1,4 +1,4 @@
-import Logo from "../src/img/portuslab-black.png";
+import portus from "./portuslab-black.png";
 
 function Home() {
     return (
@@ -11,7 +11,7 @@ function Home() {
                 
                     <div className="grid gap-2 row-gap-3">
                         <img
-                            src={Logo} className="img-fluid"
+                            src={portus} className="img-fluid"
                             alt="no_image"
                             style={{ maxHeight: "20rem", minHeight: "10rem" }}
                         />
