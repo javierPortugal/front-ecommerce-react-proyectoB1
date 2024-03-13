@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { getProducts } from "../../services/Ecommerce.service";
 import { Link } from "react-router-dom";
 import toast from 'react-hot-toast';
-import portus from './portuslab-black.png';
+import portus from '../../img/portuslab-black.png';
 
 function ListaProductos() {
     const [products, setProducts] = useState([]);
