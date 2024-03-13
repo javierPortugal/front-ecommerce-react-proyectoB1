@@ -1,4 +1,4 @@
-import Logo from "../../images/portuslab.png";
+import Logo from "../src/img/portuslab-black.png";
 
 function Home() {
     return (
