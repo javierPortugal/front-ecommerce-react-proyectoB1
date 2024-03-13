@@ -1,4 +1,4 @@
-import portus from "./portuslab-black.png";
+import portus from '../../src/img/portuslab-black.png';
 import {useState} from "react";
 import { loginService } from "../../services/Auth.service";
 
