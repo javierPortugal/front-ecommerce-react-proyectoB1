@@ -1,3 +1,4 @@
+import Logo from "../../images/portuslab.png";
 import {useState} from "react";
 import { loginService } from "../../services/Auth.service";
 
@@ -42,7 +43,7 @@ function Login() {
                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                     <div className="card ">
                         <img
-                            src="portuslab-black.png" className="img-fluid"
+                            src={Logo} className="img-fluid"
                             alt="no_image"
                             style={{ maxHeight: "20rem", minHeight: "10rem" }}
                         />

@@ -11,6 +11,7 @@ function Producto() {
         getProduct(id)
             .then((res) => {
                 console.log("id del producto es ", id);
+                console.log("Producto", res);
                 setProduct(res.data);
             })
             .catch((err) => {

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { getProducts } from "../../services/Ecommerce.service";
 import { Link } from "react-router-dom";
 import toast from 'react-hot-toast';
+import Logo from "../../images/portuslab.png";
 
 function ListaProductos() {
     const [products, setProducts] = useState([]);
@@ -48,7 +49,7 @@ function ListaProductos() {
                     <div className="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                         
                             <img
-                                src="portuslab-black.png" className="img-fluid"
+                                src={Logo} className="img-fluid"
                                 alt="no_image"
                                 style={{ maxHeight: "20rem", minHeight: "10rem" }}
                             />
