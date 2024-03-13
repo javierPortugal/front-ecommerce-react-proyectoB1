@@ -20,9 +20,9 @@ function Producto() {
     }, [id]);
     return (
         <div className="container page">
-            <div className="col-6">
+            <div className="col-4">
                 <div className="card mb-4" key={product._id} >
-                    <img src={product.image} className="card-img-top" alt="test" style={{ maxHeight: "20rem", minHeight: "10rem" }}/>
+                    <img src={product.image} className="card-img-top" alt="test"/>
 
                     <div className="card-body">
                         <h3>${product.price}</h3>
