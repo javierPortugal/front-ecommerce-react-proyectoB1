@@ -1,4 +1,4 @@
-import portus from './img/portuslab-black.png';
+import portus from './portuslab-black.png';
 
 function Home() {
     return (
